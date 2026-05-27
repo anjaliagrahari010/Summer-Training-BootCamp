@@ -27,4 +27,5 @@ int main(){
     for(int i=k-maxLen+1;i<=k;i++){
         cout<<arr[i]<<" ";
     }
+    return 0;
 }
