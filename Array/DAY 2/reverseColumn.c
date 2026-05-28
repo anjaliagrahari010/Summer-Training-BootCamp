@@ -8,7 +8,7 @@ int main(){
             scanf("%d",&mat[i][j]);
         }
     }
-    for(int i=0;i<r;i=i*2){
+    for(int i=0;i<r;i+=2){
         for(int j=0;j<c;j++){
             mat[i][j]=mat[i][j] * -1;
         }
@@ -20,6 +20,8 @@ int main(){
         int temp=mat[top][j];
         mat[top][j]=mat[bottom][j];
         mat[bottom][j]=temp;
+        top++;
+        bottom--;
     }
    }
     for(int i=0;i<r;i++){
