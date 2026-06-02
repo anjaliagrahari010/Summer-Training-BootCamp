@@ -44,6 +44,20 @@ int intersectionPoint(Node* &head1, Node* &head2){
             temp1=temp1->next;
         }
     }
+    int pos;
+    cin>>pos;
+    Node *p=head1;
+    Node *i=head2;
+    
+    for(int i=1;i<=pos;i++){
+        p=p->next;
+    }
+    while(i->next!=NULL){
+        i=i->next;
+    }
+    i->next=p;
+
+
     if(temp == NULL)
     return -1;
 
