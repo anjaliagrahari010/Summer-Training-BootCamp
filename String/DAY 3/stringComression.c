@@ -11,6 +11,7 @@ int main(){
             count++;
             i++;
         }
+        
         printf("%c",ch);
         if(count>1){
             printf("%d",count);
