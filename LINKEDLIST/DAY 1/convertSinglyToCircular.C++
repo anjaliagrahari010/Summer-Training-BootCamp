@@ -35,7 +35,7 @@ void convertToCircular(Node *head){
         temp = temp->next;
     }
 
-    temp->next = head;   // Last node points to head
+    temp->next = head;  
 }
 
 void displayCircular(Node *head){

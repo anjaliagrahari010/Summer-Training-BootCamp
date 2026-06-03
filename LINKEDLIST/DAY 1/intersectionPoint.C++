@@ -22,7 +22,19 @@ void createList(Node * &head,int n){
         }
     }
 }
+void createIntersectionPoint(Node* &head1, Node* &head2,int pos){
+    Node *p=head1;
+    Node *i=head2;
+    
+    for(int i=1;i<=pos;i++){
+        p=p->next;
+    }
+    while(i->next!=NULL){
+        i=i->next;
+    }
+    i->next=p;
 
+}
 int intersectionPoint(Node* &head1, Node* &head2){
 
     if(head1==NULL||head2==NULL){
@@ -44,19 +56,7 @@ int intersectionPoint(Node* &head1, Node* &head2){
             temp1=temp1->next;
         }
     }
-    int pos;
-    cin>>pos;
-    Node *p=head1;
-    Node *i=head2;
     
-    for(int i=1;i<=pos;i++){
-        p=p->next;
-    }
-    while(i->next!=NULL){
-        i=i->next;
-    }
-    i->next=p;
-
 
     if(temp == NULL)
     return -1;
@@ -71,6 +71,9 @@ int main(){
     createList(head1,n1);
     cin>>n2;
     createList(head2, n2);
+    int pos;
+    cin>>pos;
+    createIntersectionPoint(head1,head2,pos);
     cout<<"Intersection Node of two linkedlist: "<<endl;
     cout<<intersectionPoint(head1,head2);
 
