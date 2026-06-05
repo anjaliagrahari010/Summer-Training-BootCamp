@@ -9,6 +9,9 @@ bool isValid(string s){
         if(s[i]=='('||s[i]=='{'||s[i]=='['){
             st.push(s[i]);
         }
+        else if(isalnum(s[i])||s[i]=='+' || s[i]=='-' || s[i]=='*'||s[i]=='/'){
+            continue;
+        }
         else{
             if(st.size()==0){
                 return false;
