@@ -40,7 +40,7 @@ public:
         }
         else{
            return st.top();
-        }
+        } 
     }
     
     int getMin() {
