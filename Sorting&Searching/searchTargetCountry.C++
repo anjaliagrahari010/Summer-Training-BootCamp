@@ -4,7 +4,7 @@
 using namespace std;
 int binarySearch(vector<string>&countries, string target){
     int l=0;
-    int r=countries.size();
+    int r=countries.size()-1;
     while(l<=r){
         int mid=(l+r)/2;
         if(countries[mid]==target){
