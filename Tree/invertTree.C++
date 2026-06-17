@@ -64,6 +64,6 @@ int main(){
     cout<<"After Invert"<<" ";
     inorderTraversal(root);
     cout<<endl;
-    return 0;
+    return  0;
     
 }
