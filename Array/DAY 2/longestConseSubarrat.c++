@@ -10,22 +10,18 @@ int main(){
     }
     int maxLen=1;
     int len=1;
-    int k=0;
     for(int i=1;i<n;i++){
-        if(arr[i]>arr[i-1]){
+        if(arr[i]==arr[i-1]+1){
             len++;
         }
         else{
             len=1;
         }
-        if(len>maxLen){
+        if(maxLen<len){
             maxLen=len;
-            k=i;
         }
     }
-    vector<int>result;
-    for(int i=k-maxLen+1;i<=k;i++){
-        cout<<arr[i]<<" ";
-    }
+    cout<<maxLen;
+    
     return 0;
 }
